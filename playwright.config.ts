@@ -27,7 +27,7 @@ export default defineConfig({
             use: { ...devices['Desktop Chrome']},
         },
         {
-            name: 'store-api',
+         name: 'store-api',
             testDir: './tests/store/api'
         },
     ],
