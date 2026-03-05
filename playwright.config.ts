@@ -24,7 +24,10 @@ export default defineConfig({
         {
             name: 'store-ui',
             testDir: './tests/store/e2e',
-            use: { ...devices['Desktop Chrome']},
+            use: {
+                ...devices['Desktop Chrome'],
+                viewport: { width: 1920, height: 1080},
+            },
         },
         {
          name: 'store-api',

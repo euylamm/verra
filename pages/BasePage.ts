@@ -8,7 +8,11 @@ export class BasePage {
    }
 
    async waitForNetworkIdle() {
-    await this.page.waitForLoadState('networkidle');
+      try {
+         await this.page.waitForLoadState('networkidle', { timeout: 5_000});
+      } catch {
+         await this.page.waitForLoadState('domcontentloaded');
+      }
    }
 
    async getTitle() {

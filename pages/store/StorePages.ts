@@ -39,7 +39,7 @@ export class StoreProductsPage extends BasePage {
     }
 
     async getProductCount() {
-        await this.productCards.count();
+        return await this.productCards.count();
     }
 
 }
